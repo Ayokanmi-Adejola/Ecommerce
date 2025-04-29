@@ -1,0 +1,11 @@
+{
+  "name": "scss-practice",
+  "version": "1.0.0",
+  "description": "A project to practice SCSS",
+  "scripts": {
+    "sass": "sass --watch scss:css"
+  },
+  "devDependencies": {
+    "sass": "^1.62.0"
+  }
+}

@@ -1,0 +1,86 @@
+{
+    "name": "scss-practice",
+    "version": "1.0.0",
+    "description": "A project to practice SCSS",
+    "scripts": {
+      "sass": "sass --watch scss:css"
+    },
+    "devDependencies": {
+      "sass": "^1.62.0"
+    }
+  }
+  
+  // Variables
+  $primary-color: #3498db;
+  $secondary-color: #2ecc71;
+  $text-color: #333;
+  $font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  // Mixins
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // Base styles
+  body {
+    font-family: $font-stack;
+    color: $text-color;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Header styles
+  .header {
+    background-color: $primary-color;
+    padding: 1rem 2rem;
+    color: white;
+    
+    h1 {
+      margin: 0;
+    }
+    
+    .nav {
+      ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        
+        li {
+          margin-right: 1rem;
+          
+          a {
+            color: white;
+            text-decoration: none;
+            
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Button styles
+  .btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    &-primary {
+      background-color: $primary-color;
+      color: white;
+      
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+  
+  
+  
+  
