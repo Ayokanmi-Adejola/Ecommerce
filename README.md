@@ -2,11 +2,13 @@
 
 A modern e-commerce platform for Adejola & Sons Enterprise, showcasing their premium artisanal ice cream products.
 
+<img width="1920" height="4678" alt="image" src="https://github.com/user-attachments/assets/eb0b16ce-1283-4e7d-b8fc-cd901ad41041" />
+
 ## 🍦 About
 
 Adejola & Sons Enterprise specializes in distributing premium artisanal ice cream. Our web platform provides a seamless shopping experience for customers to explore and purchase our delicious ice cream products. 🛍️
 
-## 🔗 [Live Demo](https://adejola-global-giant.netlify.app/)
+
 
 ## ⭐ Features
 
@@ -37,7 +39,8 @@ Adejola & Sons Enterprise specializes in distributing premium artisanal ice crea
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/[your-username]/adejola-ice-cream
+git clone https://github.com/Ayokanmi-Adejola/Ecommerce
+cd Ecommerce
 ```
 
 2. Install dependencies:
@@ -91,3 +94,5 @@ Contributions are welcome! Please feel free to submit a Pull Request. 🎉
 3. 💾 Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. 📤 Push to the branch (`git push origin feature/AmazingFeature`)
 5. 🎯 Open a Pull Request
+
+
