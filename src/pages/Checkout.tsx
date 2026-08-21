@@ -94,35 +94,35 @@ const Checkout = () => {
           <title>Order Confirmation - Adejola and Sons Enterprise</title>
         </Helmet>
         
-        <main className="pt-24 pb-16 min-h-screen">
+        <main className="pt-24 pb-16 min-h-screen bg-blue-50/30">
           <div className="container-custom max-w-2xl mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="bg-white rounded-xl shadow-soft p-8 text-center"
+              className="bg-white rounded-xl shadow-soft border border-blue-100 p-8 text-center"
             >
               <div className="mb-6 flex justify-center">
                 <CheckCircle className="w-20 h-20 text-green-500" />
               </div>
               
-              <h1 className="font-serif text-3xl font-bold text-softBlack mb-4">
+              <h1 className="font-serif text-3xl font-bold text-slate-800 mb-4">
                 Order Confirmed!
               </h1>
               
-              <p className="text-charcoal/80 mb-6">
+              <p className="text-slate-600 mb-6">
                 Thank you for your purchase. Your order has been received and is now being processed.
                 You will receive a confirmation email shortly.
               </p>
               
-              <div className="mb-8 p-4 bg-green-50 rounded-lg text-left">
-                <h3 className="font-semibold mb-2">Order Summary</h3>
+              <div className="mb-8 p-4 bg-blue-50 rounded-lg text-left border border-blue-100">
+                <h3 className="font-semibold mb-2 text-slate-800">Order Summary</h3>
                 <div className="flex justify-between mb-1">
-                  <span>Order Number:</span>
-                  <span>ASE-{Math.floor(100000 + Math.random() * 900000)}</span>
+                  <span className="text-slate-600">Order Number:</span>
+                  <span className="font-medium">ASE-{Math.floor(100000 + Math.random() * 900000)}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Total Amount:</span>
-                  <span className="font-medium">₦{orderTotal.toLocaleString()}</span>
+                  <span className="text-slate-600">Total Amount:</span>
+                  <span className="font-medium text-blue-600">₦{orderTotal.toLocaleString()}</span>
                 </div>
               </div>
               
@@ -145,10 +145,10 @@ const Checkout = () => {
         <meta name="description" content="Complete your purchase securely." />
       </Helmet>
       
-      <main className="pt-24 pb-16">
+      <main className="pt-24 pb-16 bg-blue-50/20">
         <div className="container-custom">
           <div className="mb-8">
-            <Link to="/cart" className="inline-flex items-center text-primary hover:underline">
+            <Link to="/cart" className="inline-flex items-center text-blue-600 hover:underline">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Cart
             </Link>
@@ -156,15 +156,15 @@ const Checkout = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-xl shadow-soft p-6">
-                <h1 className="font-serif text-2xl font-bold text-softBlack mb-6">Checkout</h1>
+              <div className="bg-white rounded-xl shadow-soft border border-blue-50 p-6">
+                <h1 className="font-serif text-2xl font-bold text-slate-800 mb-6">Checkout</h1>
                 
                 <form onSubmit={handleSubmit}>
                   <div className="mb-8">
-                    <h2 className="font-serif text-xl font-semibold mb-4">Contact Information</h2>
+                    <h2 className="font-serif text-xl font-semibold mb-4 text-slate-800">Contact Information</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="firstName" className="block text-sm font-medium mb-1">
+                        <label htmlFor="firstName" className="block text-sm font-medium mb-1 text-slate-700">
                           First Name*
                         </label>
                         <input
@@ -173,12 +173,12 @@ const Checkout = () => {
                           name="firstName"
                           value={formData.firstName}
                           onChange={handleInputChange}
-                          className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                          className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                           required
                         />
                       </div>
                       <div>
-                        <label htmlFor="lastName" className="block text-sm font-medium mb-1">
+                        <label htmlFor="lastName" className="block text-sm font-medium mb-1 text-slate-700">
                           Last Name*
                         </label>
                         <input
@@ -187,12 +187,12 @@ const Checkout = () => {
                           name="lastName"
                           value={formData.lastName}
                           onChange={handleInputChange}
-                          className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                          className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                           required
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium mb-1">
+                        <label htmlFor="email" className="block text-sm font-medium mb-1 text-slate-700">
                           Email Address*
                         </label>
                         <input
@@ -201,12 +201,12 @@ const Checkout = () => {
                           name="email"
                           value={formData.email}
                           onChange={handleInputChange}
-                          className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                          className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                           required
                         />
                       </div>
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium mb-1">
+                        <label htmlFor="phone" className="block text-sm font-medium mb-1 text-slate-700">
                           Phone Number
                         </label>
                         <input
@@ -215,17 +215,17 @@ const Checkout = () => {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                          className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                         />
                       </div>
                     </div>
                   </div>
                   
                   <div className="mb-8">
-                    <h2 className="font-serif text-xl font-semibold mb-4">Shipping Address</h2>
+                    <h2 className="font-serif text-xl font-semibold mb-4 text-slate-800">Shipping Address</h2>
                     <div className="grid grid-cols-1 gap-4">
                       <div>
-                        <label htmlFor="address" className="block text-sm font-medium mb-1">
+                        <label htmlFor="address" className="block text-sm font-medium mb-1 text-slate-700">
                           Street Address*
                         </label>
                         <input
@@ -234,13 +234,13 @@ const Checkout = () => {
                           name="address"
                           value={formData.address}
                           onChange={handleInputChange}
-                          className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                          className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                           required
                         />
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div>
-                          <label htmlFor="city" className="block text-sm font-medium mb-1">
+                          <label htmlFor="city" className="block text-sm font-medium mb-1 text-slate-700">
                             City*
                           </label>
                           <input
@@ -249,12 +249,12 @@ const Checkout = () => {
                             name="city"
                             value={formData.city}
                             onChange={handleInputChange}
-                            className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                            className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                             required
                           />
                         </div>
                         <div>
-                          <label htmlFor="state" className="block text-sm font-medium mb-1">
+                          <label htmlFor="state" className="block text-sm font-medium mb-1 text-slate-700">
                             State/Province*
                           </label>
                           <input
@@ -263,12 +263,12 @@ const Checkout = () => {
                             name="state"
                             value={formData.state}
                             onChange={handleInputChange}
-                            className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                            className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                             required
                           />
                         </div>
                         <div>
-                          <label htmlFor="zipCode" className="block text-sm font-medium mb-1">
+                          <label htmlFor="zipCode" className="block text-sm font-medium mb-1 text-slate-700">
                             Zip/Postal Code*
                           </label>
                           <input
@@ -277,7 +277,7 @@ const Checkout = () => {
                             name="zipCode"
                             value={formData.zipCode}
                             onChange={handleInputChange}
-                            className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                            className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                             required
                           />
                         </div>
@@ -286,15 +286,15 @@ const Checkout = () => {
                   </div>
                   
                   <div className="mb-8">
-                    <h2 className="font-serif text-xl font-semibold mb-4">Payment Information</h2>
-                    <div className="bg-gray-50 p-4 rounded-lg mb-4 flex items-center">
-                      <CreditCard className="w-5 h-5 text-primary mr-2" />
-                      <span className="text-sm">All transactions are secure and encrypted.</span>
+                    <h2 className="font-serif text-xl font-semibold mb-4 text-slate-800">Payment Information</h2>
+                    <div className="bg-blue-50 p-4 rounded-lg mb-4 flex items-center border border-blue-100">
+                      <CreditCard className="w-5 h-5 text-blue-600 mr-2" />
+                      <span className="text-sm text-slate-600">All transactions are secure and encrypted.</span>
                     </div>
                     
                     <div className="grid grid-cols-1 gap-4">
                       <div>
-                        <label htmlFor="cardName" className="block text-sm font-medium mb-1">
+                        <label htmlFor="cardName" className="block text-sm font-medium mb-1 text-slate-700">
                           Name on Card*
                         </label>
                         <input
@@ -303,12 +303,12 @@ const Checkout = () => {
                           name="cardName"
                           value={formData.cardName}
                           onChange={handleInputChange}
-                          className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                          className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                           required
                         />
                       </div>
                       <div>
-                        <label htmlFor="cardNumber" className="block text-sm font-medium mb-1">
+                        <label htmlFor="cardNumber" className="block text-sm font-medium mb-1 text-slate-700">
                           Card Number*
                         </label>
                         <input
@@ -318,14 +318,14 @@ const Checkout = () => {
                           value={formData.cardNumber}
                           onChange={handleInputChange}
                           placeholder="XXXX XXXX XXXX XXXX"
-                          className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                          className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                           required
                           maxLength={19}
                         />
                       </div>
                       <div className="grid grid-cols-3 gap-4">
                         <div>
-                          <label htmlFor="expMonth" className="block text-sm font-medium mb-1">
+                          <label htmlFor="expMonth" className="block text-sm font-medium mb-1 text-slate-700">
                             Expiry Month*
                           </label>
                           <input
@@ -335,13 +335,13 @@ const Checkout = () => {
                             value={formData.expMonth}
                             onChange={handleInputChange}
                             placeholder="MM"
-                            className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                            className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                             required
                             maxLength={2}
                           />
                         </div>
                         <div>
-                          <label htmlFor="expYear" className="block text-sm font-medium mb-1">
+                          <label htmlFor="expYear" className="block text-sm font-medium mb-1 text-slate-700">
                             Expiry Year*
                           </label>
                           <input
@@ -351,13 +351,13 @@ const Checkout = () => {
                             value={formData.expYear}
                             onChange={handleInputChange}
                             placeholder="YY"
-                            className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                            className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                             required
                             maxLength={2}
                           />
                         </div>
                         <div>
-                          <label htmlFor="cvv" className="block text-sm font-medium mb-1">
+                          <label htmlFor="cvv" className="block text-sm font-medium mb-1 text-slate-700">
                             CVV*
                           </label>
                           <input
@@ -366,7 +366,7 @@ const Checkout = () => {
                             name="cvv"
                             value={formData.cvv}
                             onChange={handleInputChange}
-                            className="w-full p-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                            className="w-full p-2 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
                             required
                             maxLength={4}
                           />
@@ -375,7 +375,7 @@ const Checkout = () => {
                     </div>
                   </div>
                   
-                  <div className="mt-6 pt-4 border-t border-gray-100">
+                  <div className="mt-6 pt-4 border-t border-blue-50">
                     <button 
                       type="submit"
                       disabled={isProcessing || cartItems.length === 0}
@@ -399,8 +399,8 @@ const Checkout = () => {
             </div>
             
             <div className="lg:col-span-1">
-              <div className="bg-white rounded-xl shadow-soft p-6 sticky top-24">
-                <h2 className="font-serif text-xl font-semibold mb-4 pb-2 border-b border-gray-100">
+              <div className="bg-white rounded-xl shadow-soft border border-blue-50 p-6 sticky top-24">
+                <h2 className="font-serif text-xl font-semibold mb-4 pb-2 border-b border-blue-50 text-slate-800">
                   Order Summary
                 </h2>
                 
@@ -408,7 +408,7 @@ const Checkout = () => {
                   {cartItems.map((item) => (
                     <div key={item.product.id} className="flex justify-between">
                       <div className="flex items-start">
-                        <div className="w-10 h-10 bg-secondary/30 rounded overflow-hidden flex-shrink-0 mr-3">
+                        <div className="w-10 h-10 bg-blue-50 rounded overflow-hidden flex-shrink-0 mr-3 border border-blue-100">
                           <img 
                             src={item.product.image} 
                             alt={item.product.name} 
@@ -416,33 +416,33 @@ const Checkout = () => {
                           />
                         </div>
                         <div>
-                          <h4 className="text-sm font-medium">{item.product.name}</h4>
-                          <p className="text-xs text-charcoal/70">Qty: {item.quantity}</p>
+                          <h4 className="text-sm font-medium text-slate-800">{item.product.name}</h4>
+                          <p className="text-xs text-slate-400">Qty: {item.quantity}</p>
                         </div>
                       </div>
-                      <span className="font-medium">
+                      <span className="font-medium text-slate-700">
                         ₦{(item.product.price * item.quantity).toLocaleString()}
                       </span>
                     </div>
                   ))}
                 </div>
                 
-                <div className="space-y-2 pt-4 border-t border-gray-100">
+                <div className="space-y-2 pt-4 border-t border-blue-50">
                   <div className="flex justify-between">
-                    <span className="text-charcoal/70">Subtotal</span>
+                    <span className="text-slate-500">Subtotal</span>
                     <span className="font-medium">₦{cartTotal.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-charcoal/70">Shipping</span>
+                    <span className="text-slate-500">Shipping</span>
                     <span className="font-medium">₦{shipping.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-charcoal/70">Tax</span>
+                    <span className="text-slate-500">Tax</span>
                     <span className="font-medium">₦{tax.toLocaleString()}</span>
                   </div>
-                  <div className="pt-3 mt-3 border-t border-gray-100 flex justify-between">
-                    <span className="font-semibold">Total</span>
-                    <span className="font-semibold text-lg">
+                  <div className="pt-3 mt-3 border-t border-blue-50 flex justify-between">
+                    <span className="font-semibold text-slate-800">Total</span>
+                    <span className="font-semibold text-lg text-blue-600">
                       ₦{orderTotal.toLocaleString()}
                     </span>
                   </div>

@@ -33,10 +33,10 @@ const Cart = () => {
       <main className="pt-24 pb-16 min-h-screen">
         <div className="container-custom">
           <div className="flex items-center justify-between mb-8">
-            <h1 className="font-serif text-3xl font-bold text-softBlack">Your Cart</h1>
+            <h1 className="font-serif text-3xl font-bold text-slate-800">Your Cart</h1>
             <Link 
               to="/products" 
-              className="inline-flex items-center text-primary hover:underline"
+              className="inline-flex items-center text-blue-600 hover:underline"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Continue Shopping
@@ -46,9 +46,9 @@ const Cart = () => {
           {cartItems.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-2">
-                <div className="bg-white rounded-xl shadow-soft p-6">
-                  <div className="mb-4 pb-2 border-b border-gray-100">
-                    <h2 className="font-serif text-xl font-semibold">Cart Items ({cartItems.length})</h2>
+                <div className="bg-white rounded-xl shadow-soft border border-blue-50 p-6">
+                  <div className="mb-4 pb-2 border-b border-blue-50">
+                    <h2 className="font-serif text-xl font-semibold text-slate-800">Cart Items ({cartItems.length})</h2>
                   </div>
                   
                   <div className="space-y-1">
@@ -57,7 +57,7 @@ const Cart = () => {
                     ))}
                   </div>
                   
-                  <div className="mt-6 pt-4 border-t border-gray-100 flex justify-end">
+                  <div className="mt-6 pt-4 border-t border-blue-50 flex justify-end">
                     <button 
                       onClick={clearCart}
                       className="flex items-center text-red-500 hover:text-red-700 transition-colors"
@@ -74,28 +74,28 @@ const Cart = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="bg-white rounded-xl shadow-soft p-6 sticky top-24"
+                  className="bg-white rounded-xl shadow-soft border border-blue-50 p-6 sticky top-24"
                 >
-                  <h2 className="font-serif text-xl font-semibold mb-4 pb-2 border-b border-gray-100">
+                  <h2 className="font-serif text-xl font-semibold mb-4 pb-2 border-b border-blue-50 text-slate-800">
                     Order Summary
                   </h2>
                   
                   <div className="space-y-3 mb-6">
                     <div className="flex justify-between">
-                      <span className="text-charcoal/70">Subtotal</span>
+                      <span className="text-slate-500">Subtotal</span>
                       <span className="font-medium">₦{cartTotal.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-charcoal/70">Shipping</span>
+                      <span className="text-slate-500">Shipping</span>
                       <span className="font-medium">₦{(500).toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-charcoal/70">Tax</span>
+                      <span className="text-slate-500">Tax</span>
                       <span className="font-medium">₦{(cartTotal * 0.08).toLocaleString()}</span>
                     </div>
-                    <div className="pt-3 mt-3 border-t border-gray-100 flex justify-between">
-                      <span className="font-semibold">Total</span>
-                      <span className="font-semibold text-lg">
+                    <div className="pt-3 mt-3 border-t border-blue-50 flex justify-between">
+                      <span className="font-semibold text-slate-800">Total</span>
+                      <span className="font-semibold text-lg text-blue-600">
                         ₦{(cartTotal + 500 + cartTotal * 0.08).toLocaleString()}
                       </span>
                     </div>
@@ -119,7 +119,7 @@ const Cart = () => {
                     )}
                   </button>
                   
-                  <div className="mt-4 flex items-center justify-center text-xs text-charcoal/60">
+                  <div className="mt-4 flex items-center justify-center text-xs text-slate-400">
                     <div className="flex items-center space-x-2">
                       <span>Secure Payment</span>
                       <span>•</span>
@@ -137,12 +137,12 @@ const Cart = () => {
               animate={{ opacity: 1 }}
               className="text-center py-16"
             >
-              <div className="bg-cream/50 max-w-md mx-auto rounded-xl p-8">
+              <div className="bg-blue-50/60 max-w-md mx-auto rounded-xl p-8 border border-blue-100">
                 <div className="flex justify-center mb-4">
-                  <ShoppingCart className="w-16 h-16 text-primary/70" />
+                  <ShoppingCart className="w-16 h-16 text-blue-400" />
                 </div>
-                <h2 className="font-serif text-2xl font-semibold mb-2">Your cart is empty</h2>
-                <p className="text-charcoal/70 mb-6">
+                <h2 className="font-serif text-2xl font-semibold mb-2 text-slate-800">Your cart is empty</h2>
+                <p className="text-slate-500 mb-6">
                   Looks like you haven't added any products to your cart yet.
                 </p>
                 <Link to="/products" className="button-primary inline-flex">

@@ -67,7 +67,7 @@ const featuredProducts: Product[] = [
 
 const FeaturedProducts = memo(() => {
   return (
-    <section className="section bg-cream/50 px-4 sm:px-6 lg:px-8">
+    <section className="section bg-blue-50/50 px-4 sm:px-6 lg:px-8">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 sm:mb-12">
           <motion.div
@@ -76,8 +76,8 @@ const FeaturedProducts = memo(() => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-3 py-1 bg-mint text-primary text-sm font-medium rounded-full mb-4">Our Premium Selection</span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-semibold text-softBlack leading-normal max-w-lg">Premium Ice Cream</h2>
+            <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-full mb-4">Our Premium Selection</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-semibold text-slate-800 leading-normal max-w-lg">Premium Ice Cream</h2>
           </motion.div>
 
           <motion.div
@@ -88,7 +88,7 @@ const FeaturedProducts = memo(() => {
           >
             <Link
               to="/products"
-              className="group inline-flex items-center text-primary font-medium mt-4 md:mt-0 hover:underline"
+              className="group inline-flex items-center text-blue-600 font-medium mt-4 md:mt-0 hover:underline"
             >
               <span>Explore All Products</span>
               <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

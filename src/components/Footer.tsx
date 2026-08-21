@@ -52,7 +52,7 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="bg-softBlack text-white pt-8 sm:pt-10 pb-4 sm:pb-6 px-4 sm:px-6 lg:px-8">
+    <footer id="contact" className="bg-slate-900 text-white pt-8 sm:pt-10 pb-4 sm:pb-6 px-4 sm:px-6 lg:px-8">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-0 pb-6 sm:pb-8 border-b border-white/10">
           <div className="lg:pr-0">
@@ -63,48 +63,43 @@ const Footer = () => {
                 className="h-8 w-auto"
                 loading="lazy"
               />
-              <span className="font-serif text-xl sm:text-2xl font-bold">Adejola & Sons</span>
+              <span className="font-serif text-xl sm:text-2xl font-bold text-white">Adejola & Sons</span>
             </Link>
             <p className="text-white/70 mb-4 max-w-xs text-sm">
             Are you looking for a reliable way to get FanIce products? We've got you covered! We deliver a wide variety of FanIce products throughout Nigeria.
             </p>
             <div className="flex space-x-3">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors duration-300">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-600 transition-colors duration-300">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors duration-300">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-600 transition-colors duration-300">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors duration-300">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-600 transition-colors duration-300">
                 <Twitter className="w-4 h-4" />
               </a>
             </div>
           </div>
 
           <div className="lg:ml-12 lg:pr-0 lg:-mr-12">
-            <h4 className="font-serif text-base font-semibold mb-3">Quick Links</h4>
+            <h4 className="font-serif text-base font-semibold mb-3 text-white">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <button
                   onClick={() => {
                     if (location.pathname === '/') {
-                      // If already on home page, scroll to top
-                      window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                      });
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
                     } else {
-                      // If on different page, navigate to home
                       navigate('/');
                     }
                   }}
-                  className="text-white/70 hover:text-white transition-colors duration-200 text-left"
+                  className="text-white/70 hover:text-blue-400 transition-colors duration-200 text-left"
                 >
                   Home
                 </button>
               </li>
               <li>
-                <Link to="/products" className="text-white/70 hover:text-white transition-colors duration-200">
+                <Link to="/products" className="text-white/70 hover:text-blue-400 transition-colors duration-200">
                   Products
                 </Link>
               </li>
@@ -112,11 +107,9 @@ const Footer = () => {
                 <button
                   onClick={() => {
                     const element = document.querySelector('#about');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
+                    if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }}
-                  className="text-white/70 hover:text-white transition-colors duration-200 text-left"
+                  className="text-white/70 hover:text-blue-400 transition-colors duration-200 text-left"
                 >
                   About Us
                 </button>
@@ -125,11 +118,9 @@ const Footer = () => {
                 <button
                   onClick={() => {
                     const element = document.querySelector('#contact');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
+                    if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }}
-                  className="text-white/70 hover:text-white transition-colors duration-200 text-left"
+                  className="text-white/70 hover:text-blue-400 transition-colors duration-200 text-left"
                 >
                   Contact
                 </button>
@@ -138,23 +129,23 @@ const Footer = () => {
           </div>
 
           <div className="lg:pl-0 lg:-ml-12">
-            <h4 className="font-serif text-base font-semibold mb-3">Contact Us</h4>
+            <h4 className="font-serif text-base font-semibold mb-3 text-white">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <MapPin className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-blue-400 mr-2 mt-0.5 flex-shrink-0" />
                 <span className="text-white/70 text-sm">
                   plot 5, block 3, prayer city, Ibafo, ogun state, Nigeria.
                 </span>
               </li>
               <li className="flex items-center">
-                <Phone className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                <a href="tel:08051531723" className="text-white/70 hover:text-white transition-colors duration-200">
+                <Phone className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                <a href="tel:08051531723" className="text-white/70 hover:text-blue-400 transition-colors duration-200">
                   +234 8051531723
                 </a>
               </li>
               <li className="flex items-center">
-                <Mail className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                <a href="mailto:adejolaomowunmi@gmail.com" className="text-white/70 hover:text-white transition-colors duration-200">
+                <Mail className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                <a href="mailto:adejolaomowunmi@gmail.com" className="text-white/70 hover:text-blue-400 transition-colors duration-200">
                   adejola&sons@gmail.com
                 </a>
               </li>
@@ -162,7 +153,7 @@ const Footer = () => {
           </div>
 
           <div className="lg:pl-12 lg:ml-4">
-            <h4 className="font-serif text-base font-semibold mb-3">Opening Hours</h4>
+            <h4 className="font-serif text-base font-semibold mb-3 text-white">Opening Hours</h4>
             <ul className="space-y-2 text-sm">
               <li className="flex justify-between">
                 <span className="text-white/70">Weekdays </span>
@@ -181,13 +172,13 @@ const Footer = () => {
                   placeholder="Your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="bg-white/10 text-white placeholder-white/50 rounded-md sm:rounded-l-md sm:rounded-r-none px-3 py-2 w-full focus:outline-none focus:bg-white/20 transition-colors text-xs"
+                  className="bg-white/10 text-white placeholder-white/50 rounded-md sm:rounded-l-md sm:rounded-r-none px-3 py-2 w-full focus:outline-none focus:bg-white/20 transition-colors text-xs border border-white/10 focus:border-blue-400"
                   disabled={isSubmitting}
                 />
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-primary text-white px-3 py-2 rounded-md sm:rounded-r-md sm:rounded-l-none hover:bg-primary/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-xs whitespace-nowrap"
+                  className="bg-blue-600 text-white px-3 py-2 rounded-md sm:rounded-r-md sm:rounded-l-none hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-xs whitespace-nowrap"
                 >
                   {isSubmitting ? "..." : "Send"}
                 </button>
@@ -196,7 +187,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-5 text-center text-white/60 text-xs">
+        <div className="pt-5 text-center text-white/50 text-xs">
           <p>© {currentYear} Adejola & Sons, All rights reserved.</p>
         </div>
       </div>

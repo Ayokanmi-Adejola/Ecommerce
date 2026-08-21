@@ -54,7 +54,7 @@ const Products = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-8 sm:mb-12"
           >
-            <h1 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-charcoal/80 max-w-2xl mx-auto leading-tight">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-slate-700 max-w-2xl mx-auto leading-tight">
             Indulge in the refreshing taste you know and love, delivered fresh.
             </h1>
           </motion.div>
@@ -67,9 +67,9 @@ const Products = () => {
                 placeholder="Search flavors..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full py-2.5 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary/30 focus:border-primary text-sm bg-white"
+                className="w-full py-2.5 pl-10 pr-4 border border-blue-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400 text-sm bg-white"
               />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-4 h-4" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-400 w-4 h-4" />
             </div>
 
             {/* Categories */}
@@ -80,8 +80,8 @@ const Products = () => {
                   onClick={() => setActiveCategory(category)}
                   className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm transition-colors ${
                     activeCategory === category
-                      ? "bg-primary text-white"
-                      : "bg-secondary/50 text-softBlack hover:bg-secondary"
+                      ? "bg-blue-600 text-white shadow-soft"
+                      : "bg-blue-50 text-slate-600 hover:bg-blue-100 border border-blue-100"
                   }`}
                 >
                   {category}
@@ -91,7 +91,7 @@ const Products = () => {
               {(activeCategory !== "All" || searchTerm) && (
                 <button
                   onClick={clearFilters}
-                  className="px-3 sm:px-4 py-2 rounded-full bg-gray-100 text-softBlack text-xs sm:text-sm hover:bg-gray-200 transition-colors flex items-center"
+                  className="px-3 sm:px-4 py-2 rounded-full bg-slate-100 text-slate-600 text-xs sm:text-sm hover:bg-slate-200 transition-colors flex items-center border border-slate-200"
                 >
                   <FilterX className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                   Clear filters
@@ -107,7 +107,7 @@ const Products = () => {
                   key={product.id}
                   product={product}
                   index={index}
-                  priority={index < 4} // Priority loading for first 4 products
+                  priority={index < 4}
                   showPrice={false}
                 />
               ))}
@@ -117,10 +117,10 @@ const Products = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="bg-secondary/30 rounded-lg p-8 max-w-md mx-auto"
+                className="bg-blue-50 rounded-lg p-8 max-w-md mx-auto border border-blue-100"
               >
-                <h3 className="font-serif text-xl font-semibold mb-2">No products found</h3>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="font-serif text-xl font-semibold mb-2 text-slate-800">No products found</h3>
+                <p className="text-slate-500 mb-4">
                   We couldn't find any products matching your current filters.
                 </p>
                 <button

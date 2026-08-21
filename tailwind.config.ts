@@ -67,13 +67,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				cream: "#FFF8F0",
-				mint: "#E0F2E9",
-				gold: "#D4AF37",
-				softBlack: "#333333",
-				charcoal: "#36454F",
-				paleGold: "#E6D2AC",
-				softPink: "#F9E0E3",
+				cream: "#F0F6FF",
+				mint: "#DBEAFE",
+				gold: "#1D4ED8",
+				softBlack: "#1E293B",
+				charcoal: "#334155",
+				paleGold: "#BFDBFE",
+				softPink: "#EFF6FF",
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
@@ -118,9 +118,9 @@ export default {
 				'spacing': 'margin, padding',
 			},
 			boxShadow: {
-				'soft': '0 5px 20px rgba(0, 0, 0, 0.05)',
-				'medium': '0 8px 30px rgba(0, 0, 0, 0.08)',
-				'strong': '0 10px 40px rgba(0, 0, 0, 0.12)',
+				'soft': '0 5px 20px rgba(37, 99, 235, 0.08)',
+				'medium': '0 8px 30px rgba(37, 99, 235, 0.14)',
+				'strong': '0 10px 40px rgba(37, 99, 235, 0.20)',
 			},
 			backdropBlur: {
 				xs: '2px',

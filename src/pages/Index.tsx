@@ -20,13 +20,13 @@ const Index = () => {
         <Hero />
         <FeaturedProducts />
         
-        <section className="section bg-cream/30">
+        <section className="section bg-blue-50/30">
           <div className="container-custom">
             <div className="text-center mb-12">
               <motion.span 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="inline-block px-4 py-1.5 bg-mint text-primary text-sm font-medium rounded-full mb-4"
+                className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-sm font-medium rounded-full mb-4"
               >
                 Customer Testimonials
               </motion.span>
@@ -42,7 +42,7 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-charcoal/70 max-w-2xl mx-auto"
+                className="text-slate-500 max-w-2xl mx-auto"
               >
                 Read genuine reviews from our satisfied customers across Nigeria
               </motion.p>
@@ -62,12 +62,12 @@ const Index = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="bg-white p-6 rounded-2xl shadow-soft h-full flex flex-col relative"
+                        className="bg-white p-6 rounded-2xl shadow-soft border border-blue-50 h-full flex flex-col relative"
                       >
-                        <Quote className="absolute top-4 right-4 w-8 h-8 text-mint/30" />
+                        <Quote className="absolute top-4 right-4 w-8 h-8 text-blue-100" />
                         
                         <div className="flex items-center mb-6">
-                          <div className="w-14 h-14 rounded-full overflow-hidden mr-4 ring-2 ring-mint/20 bg-white p-2 flex items-center justify-center">
+                          <div className="w-14 h-14 rounded-full overflow-hidden mr-4 ring-2 ring-blue-100 bg-blue-50 p-2 flex items-center justify-center">
                             <img 
                               src={testimonial.image} 
                               alt={testimonial.name}
@@ -75,16 +75,16 @@ const Index = () => {
                             />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-softBlack">{testimonial.name}</h3>
-                            <p className="text-sm text-charcoal/60">{testimonial.location}</p>
+                            <h3 className="font-semibold text-slate-800">{testimonial.name}</h3>
+                            <p className="text-sm text-slate-400">{testimonial.location}</p>
                           </div>
                         </div>
                         
-                        <p className="text-charcoal/80 flex-grow mb-4 italic">
+                        <p className="text-slate-600 flex-grow mb-4 italic">
                           "{testimonial.text}"
                         </p>
                         
-                        <div className="flex items-center justify-between mt-auto pt-4 border-t border-mint/10">
+                        <div className="flex items-center justify-between mt-auto pt-4 border-t border-blue-50">
                           <div className="flex">
                             {[...Array(testimonial.rating)].map((_, i) => (
                               <Star 
@@ -93,7 +93,7 @@ const Index = () => {
                               />
                             ))}
                           </div>
-                          <span className="text-xs text-charcoal/40">{testimonial.date}</span>
+                          <span className="text-xs text-slate-400">{testimonial.date}</span>
                         </div>
                       </motion.div>
                     </CarouselItem>

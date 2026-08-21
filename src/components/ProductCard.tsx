@@ -26,17 +26,17 @@ const ProductCard = memo(({ product, priority = false, showPrice = true }: Produ
 
   const content = (
     <>
-      <div className="relative pb-[90%] bg-mint/10 p-4">
+      <div className="relative pb-[90%] bg-blue-50/60 p-4">
         <img {...imageProps} />
         {product.featured && (
-          <span className="absolute top-3 left-3 px-2.5 py-1 bg-primary text-white text-xs font-medium uppercase tracking-wide rounded-full z-10 shadow-sm">
+          <span className="absolute top-3 left-3 px-2.5 py-1 bg-blue-600 text-white text-xs font-medium uppercase tracking-wide rounded-full z-10 shadow-sm">
             Premium
           </span>
         )}
       </div>
 
       <div className="p-4">
-        <h3 className="font-serif text-base font-semibold text-softBlack group-hover:text-primary transition-colors duration-300 mb-2 whitespace-nowrap overflow-hidden text-ellipsis">
+        <h3 className="font-serif text-base font-semibold text-slate-800 group-hover:text-blue-600 transition-colors duration-300 mb-2 whitespace-nowrap overflow-hidden text-ellipsis">
           {product.name}
         </h3>
         <p className="text-xs text-muted-foreground line-clamp-4 leading-normal">
@@ -44,7 +44,7 @@ const ProductCard = memo(({ product, priority = false, showPrice = true }: Produ
         </p>
         {!isFeaturedDisplay && showPrice && (
           <div className="mt-3 sm:mt-4">
-            <span className="text-base sm:text-lg font-semibold text-primary">
+            <span className="text-base sm:text-lg font-semibold text-blue-600">
               ₦{product.price.toLocaleString()}
             </span>
           </div>

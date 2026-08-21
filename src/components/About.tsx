@@ -23,8 +23,8 @@ const About = () => {
               />
             </div>
             {/* Decorative Elements */}
-            <div className="absolute -bottom-6 -right-6 w-2/3 h-2/3 bg-mint rounded-lg -z-0"></div>
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-softPink rounded-full -z-0 opacity-60"></div>
+            <div className="absolute -bottom-6 -right-6 w-2/3 h-2/3 bg-blue-100 rounded-lg -z-0"></div>
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-50 rounded-full -z-0 opacity-80"></div>
           </motion.div>
 
           <motion.div
@@ -35,10 +35,10 @@ const About = () => {
             className="space-y-8"
           >
             <div>
-              <span className="inline-block px-3 py-1 bg-mint text-primary text-sm font-medium rounded-full mb-6">Our Story</span>
-              <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 sm:mb-6 text-softBlack">Excellence in Ice Cream Distribution</h2>
+              <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-full mb-6">Our Story</span>
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 sm:mb-6 text-slate-800">Excellence in Ice Cream Distribution</h2>
 
-              <div className="space-y-4 text-charcoal/80">
+              <div className="space-y-4 text-slate-600">
                 <p className="leading-relaxed">
                   Since our establishment, Adejola & Sons Distribution Company has been revolutionizing ice cream distribution
                   across Nigeria. As an authorized distributor for FanIce and other premium brands, we've built a reputation
@@ -82,11 +82,11 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.4 + (index * 0.1) }}
-                  className="p-4 sm:p-5 rounded-xl bg-white shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1"
+                  className="p-4 sm:p-5 rounded-xl bg-white border border-blue-100 shadow-soft hover:shadow-medium hover:border-blue-200 transition-all duration-300 hover:-translate-y-1"
                 >
-                  <feature.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-2 sm:mb-3" />
-                  <h3 className="font-semibold mb-1 sm:mb-2 text-softBlack text-sm sm:text-base">{feature.title}</h3>
-                  <p className="text-xs sm:text-sm text-charcoal/70 leading-relaxed">{feature.description}</p>
+                  <feature.icon className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 mb-2 sm:mb-3" />
+                  <h3 className="font-semibold mb-1 sm:mb-2 text-slate-800 text-sm sm:text-base">{feature.title}</h3>
+                  <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">{feature.description}</p>
                 </motion.div>
               ))}
             </div>

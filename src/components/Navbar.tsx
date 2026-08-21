@@ -118,7 +118,7 @@ const Navbar = () => {
       <header
         className={cn(
           "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-          scrolled ? "bg-white/90 backdrop-blur-sm shadow-soft py-3" : "bg-transparent py-5"
+          scrolled ? "bg-white/95 backdrop-blur-sm shadow-soft py-3 border-b border-blue-100" : "bg-white/80 backdrop-blur-sm py-5"
         )}
       >
         <div className="container-custom flex items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -132,7 +132,7 @@ const Navbar = () => {
             <Link
               to="/"
               onClick={handleHomeClick}
-              className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-softBlack hover:opacity-90 transition-opacity"
+              className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-blue-700 hover:text-blue-800 transition-colors"
             >
               Adejola & Sons
             </Link>
@@ -172,22 +172,22 @@ const Navbar = () => {
             {/* Social Media Links */}
             <div className="flex items-center space-x-3">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <Facebook className="h-5 w-5 text-softBlack hover:text-primary transition-colors" />
+                <Facebook className="h-5 w-5 text-slate-500 hover:text-blue-600 transition-colors" />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <Instagram className="h-5 w-5 text-softBlack hover:text-primary transition-colors" />
+                <Instagram className="h-5 w-5 text-slate-500 hover:text-blue-600 transition-colors" />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Twitter className="h-5 w-5 text-softBlack hover:text-primary transition-colors" />
+                <Twitter className="h-5 w-5 text-slate-500 hover:text-blue-600 transition-colors" />
               </a>
             </div>
           </nav>
 
           <div className="flex items-center space-x-4">
             <Link to="/cart" className="relative p-2">
-              <ShoppingCart className="h-6 w-6 text-softBlack" />
+              <ShoppingCart className="h-6 w-6 text-slate-600 hover:text-blue-600 transition-colors" />
               {itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-semibold">
                   {itemCount}
                 </span>
               )}
@@ -200,9 +200,9 @@ const Navbar = () => {
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {mobileMenuOpen ? (
-                <X className="h-6 w-6 text-softBlack" />
+                <X className="h-6 w-6 text-slate-700" />
               ) : (
-                <Menu className="h-6 w-6 text-softBlack" />
+                <Menu className="h-6 w-6 text-slate-700" />
               )}
             </button>
           </div>
@@ -212,7 +212,7 @@ const Navbar = () => {
       {/* Mobile Navigation Backdrop */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-[55] md:hidden"
+          className="fixed inset-0 bg-blue-950/40 z-[55] md:hidden"
           style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
           onClick={() => setMobileMenuOpen(false)}
         />
@@ -221,7 +221,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "fixed top-0 right-0 h-screen w-72 max-w-[85vw] bg-white z-[60] flex flex-col pt-20 px-4 sm:px-6 md:hidden transform transition-transform duration-300 ease-in-out shadow-2xl overflow-y-auto",
+          "fixed top-0 right-0 h-screen w-72 max-w-[85vw] bg-white z-[60] flex flex-col pt-20 px-4 sm:px-6 md:hidden transform transition-transform duration-300 ease-in-out shadow-2xl overflow-y-auto border-l border-blue-100",
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
         style={{ position: 'fixed' }}
@@ -232,7 +232,7 @@ const Navbar = () => {
               <button
                 key={link.name}
                 onClick={() => handleNavClick(link, true)}
-                className="text-lg sm:text-xl font-medium text-softBlack text-left py-3 border-b border-gray-100 hover:text-primary transition-colors"
+                className="text-lg sm:text-xl font-medium text-slate-700 text-left py-3 border-b border-blue-50 hover:text-blue-600 transition-colors"
               >
                 {link.name}
               </button>
@@ -244,7 +244,7 @@ const Navbar = () => {
                   handleHomeClick();
                   setMobileMenuOpen(false);
                 }}
-                className="text-xl font-medium text-softBlack py-2 border-b border-gray-100 hover:text-primary transition-colors"
+                className="text-xl font-medium text-slate-700 py-2 border-b border-blue-50 hover:text-blue-600 transition-colors"
               >
                 {link.name}
               </Link>
@@ -252,7 +252,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="text-xl font-medium text-softBlack py-2 border-b border-gray-100 hover:text-primary transition-colors"
+                className="text-xl font-medium text-slate-700 py-2 border-b border-blue-50 hover:text-blue-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
@@ -263,13 +263,13 @@ const Navbar = () => {
           {/* Social Media Links for mobile */}
           <div className="flex items-center space-x-5 pt-8 mt-auto pb-6">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <Facebook className="h-6 w-6 text-softBlack hover:text-primary transition-colors" />
+              <Facebook className="h-6 w-6 text-slate-500 hover:text-blue-600 transition-colors" />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <Instagram className="h-6 w-6 text-softBlack hover:text-primary transition-colors" />
+              <Instagram className="h-6 w-6 text-slate-500 hover:text-blue-600 transition-colors" />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Twitter className="h-6 w-6 text-softBlack hover:text-primary transition-colors" />
+              <Twitter className="h-6 w-6 text-slate-500 hover:text-blue-600 transition-colors" />
             </a>
           </div>
         </nav>
