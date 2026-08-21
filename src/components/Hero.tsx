@@ -5,63 +5,80 @@ import { Truck, Clock, MapPin, IceCream } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-16 px-4 sm:px-6 lg:px-8">
-      {/* Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        {/* Main gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-100/40"></div>
+    <section className="relative h-screen w-screen flex items-center justify-center overflow-hidden">
 
-        {/* Soft decorative shapes */}
-        <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-blue-600/5 rounded-bl-[100px] sm:rounded-bl-[200px] blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-400/8 rounded-tr-[100px] sm:rounded-tr-[200px] blur-3xl"></div>
-
-        {/* Additional ambient lighting */}
-        <div className="absolute top-1/4 left-1/4 w-1/3 h-1/3 bg-blue-200/20 rounded-full blur-3xl"></div>
+      {/* Background image — fills the entire section */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/delivery.png"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-center"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+        />
       </div>
 
-      <div className="container-custom grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
-        {/* Content Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="order-2 md:order-1"
-        >
+      {/* Overlay — blue-tinted dark gradient so text is legible */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-blue-950/80 via-blue-900/65 to-blue-800/30"></div>
 
+      {/* Bottom fade to blend into the next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 z-10 bg-gradient-to-t from-white/10 to-transparent"></div>
+
+      <div className="relative z-20 w-full px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-3xl flex flex-col items-center"
+        >
+          {/* Eyebrow */}
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-3 py-1 bg-white/15 backdrop-blur-sm border border-white/25 text-white/90 text-sm font-medium rounded-full mb-6"
+          >
+            <IceCream className="w-4 h-4 text-blue-300" />
+            Nigeria's Premium Ice Cream Distributor
+          </motion.span>
 
           {/* Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-slate-800 leading-tight mb-6 flex items-center gap-3 flex-wrap">
-            Delivering Quality <span className="text-blue-600"> Ice Cream </span>
-            <IceCream className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 text-blue-600 flex-shrink-0" />
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6">
+            Delivering Quality{" "}
+            <span className="text-blue-300">Ice Cream</span>{" "}
+            Nationwide
           </h1>
 
           {/* Description */}
-          <p className="text-base sm:text-lg text-slate-600 mb-8 max-w-xl leading-relaxed">
-          Our fleet of refrigerated vehicles and expert team ensure your FanIce products arrive in perfect condition,
-          maintaining consistent temperature from our warehouse to your freezer.
+          <p className="text-base sm:text-lg text-white/80 mb-8 max-w-xl leading-relaxed">
+            Our fleet of refrigerated vehicles and expert team ensure your FanIce products
+            arrive in perfect condition — maintaining consistent temperature from our
+            warehouse to your freezer.
           </p>
 
-          {/* Features */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 mb-8">
-            <div className="flex items-center gap-3 bg-white/80 border border-blue-100 p-3 sm:p-4 rounded-lg backdrop-blur-sm shadow-soft">
-              <Truck className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 flex-shrink-0" />
-              <span className="text-xs sm:text-sm font-medium text-slate-700">Nationwide Coverage</span>
+          {/* Feature badges */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full">
+              <Truck className="w-4 h-4 text-blue-300 flex-shrink-0" />
+              <span className="text-xs sm:text-sm font-medium text-white">Nationwide Coverage</span>
             </div>
-            <div className="flex items-center gap-3 bg-white/80 border border-blue-100 p-3 sm:p-4 rounded-lg backdrop-blur-sm shadow-soft">
-              <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 flex-shrink-0" />
-              <span className="text-xs sm:text-sm font-medium text-slate-700">24/7 Support</span>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full">
+              <Clock className="w-4 h-4 text-blue-300 flex-shrink-0" />
+              <span className="text-xs sm:text-sm font-medium text-white">24/7 Support</span>
             </div>
-            <div className="flex items-center gap-3 bg-white/80 border border-blue-100 p-3 sm:p-4 rounded-lg backdrop-blur-sm shadow-soft">
-              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 flex-shrink-0" />
-              <span className="text-xs sm:text-sm font-medium text-slate-700">Live Tracking</span>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full">
+              <MapPin className="w-4 h-4 text-blue-300 flex-shrink-0" />
+              <span className="text-xs sm:text-sm font-medium text-white">Live Tracking</span>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link
               to="/products"
-              className="w-full sm:w-auto bg-blue-600 text-white px-6 py-3 rounded-md shadow-soft transition-all duration-300 hover:bg-blue-700 hover:shadow-medium inline-flex items-center justify-center group text-center"
+              className="w-full sm:w-auto bg-blue-600 text-white px-7 py-3.5 rounded-md shadow-strong transition-all duration-300 hover:bg-blue-500 inline-flex items-center justify-center group font-medium"
             >
               Explore Products
               <svg
@@ -77,50 +94,13 @@ const Hero = () => {
               onClick={() => {
                 const element = document.querySelector('#about');
                 if (element) {
-                  element.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                  });
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
               }}
-              className="w-full sm:w-48 bg-white text-blue-700 border border-blue-200 px-8 py-3 rounded-md shadow-soft transition-all duration-300 hover:bg-blue-50 hover:shadow-medium inline-flex items-center justify-center text-center"
+              className="w-full sm:w-auto bg-white/15 backdrop-blur-sm text-white border border-white/30 px-7 py-3.5 rounded-md transition-all duration-300 hover:bg-white/25 inline-flex items-center justify-center font-medium"
             >
               About Us
             </button>
-          </div>
-        </motion.div>
-
-        {/* Image Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="order-1 md:order-2 relative"
-        >
-          <div className="relative aspect-square max-w-md mx-auto">
-            {/* Enhanced Floating Animation with blue gradient */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute w-full h-full rounded-full bg-gradient-to-b from-blue-400/20 via-blue-200/20 to-transparent blur-2xl"
-            />
-
-            {/* Main Image */}
-            <img
-              src="/delivery.png"
-              alt="Ice cream delivery vehicle"
-              className="w-full h-full object-contain relative z-10 drop-shadow-xl"
-              loading="eager"
-              decoding="async"
-              fetchPriority="high"
-            />
-
-            {/* Enhanced Decorative Element */}
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-              className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-gradient-to-br from-blue-400/15 to-blue-200/15 blur-2xl"
-            />
           </div>
         </motion.div>
       </div>
